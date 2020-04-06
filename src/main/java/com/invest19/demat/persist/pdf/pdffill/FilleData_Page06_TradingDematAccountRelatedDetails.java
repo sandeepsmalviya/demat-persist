@@ -7,24 +7,24 @@ import java.text.SimpleDateFormat;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.invest19.demat.persist.pdf.bean.page6.DealingsThroughOtherMembers;
-import com.invest19.demat.persist.pdf.bean.page6.DetailsOfRelatedPerson;
-import com.invest19.demat.persist.pdf.bean.page6.DetailsOfRelatedPerson.RpType;
-import com.invest19.demat.persist.pdf.bean.page6.PastActions;
-import com.invest19.demat.persist.pdf.bean.page6.PrimaryBankingAccount;
-import com.invest19.demat.persist.pdf.bean.page6.PrimaryBankingAccount.AccountType;
-import com.invest19.demat.persist.pdf.bean.page6.PrimaryDepositoryAccount;
-import com.invest19.demat.persist.pdf.bean.page6.PrimaryDepositoryAccount.DpType;
-import com.invest19.demat.persist.pdf.bean.page6.TradingDematAccountRelatedDetails;
-import com.invest19.demat.persist.pdf.bean.page7.AdditionalDetails;
-import com.invest19.demat.persist.pdf.bean.page7.AdditionalDetails.ContactNoteReference;
-import com.invest19.demat.persist.pdf.bean.page7.ClientsInterview;
-import com.invest19.demat.persist.pdf.bean.page7.ForOfficeUseOnly;
-import com.invest19.demat.persist.pdf.bean.page7.InPersonVerification;
-import com.invest19.demat.persist.pdf.bean.page7.IntroducerDeatails;
-import com.invest19.demat.persist.pdf.bean.page7.IntroducerDeatails.IntroducersStatus;
-import com.invest19.demat.persist.pdf.bean.page7.VerificationOfDocuments;
-import com.invest19.demat.persist.pdf.bean.page8.PartB;
+import com.invest19.demat.persist.pdf.bean.page06.DealingsThroughOtherMembers;
+import com.invest19.demat.persist.pdf.bean.page06.DetailsOfRelatedPerson;
+import com.invest19.demat.persist.pdf.bean.page06.PastActions;
+import com.invest19.demat.persist.pdf.bean.page06.PrimaryBankingAccount;
+import com.invest19.demat.persist.pdf.bean.page06.PrimaryDepositoryAccount;
+import com.invest19.demat.persist.pdf.bean.page06.TradingDematAccountRelatedDetails;
+import com.invest19.demat.persist.pdf.bean.page06.DetailsOfRelatedPerson.RpType;
+import com.invest19.demat.persist.pdf.bean.page06.PrimaryBankingAccount.AccountType;
+import com.invest19.demat.persist.pdf.bean.page06.PrimaryDepositoryAccount.DpType;
+import com.invest19.demat.persist.pdf.bean.page07.AdditionalDetails;
+import com.invest19.demat.persist.pdf.bean.page07.ClientsInterview;
+import com.invest19.demat.persist.pdf.bean.page07.ForOfficeUseOnly;
+import com.invest19.demat.persist.pdf.bean.page07.InPersonVerification;
+import com.invest19.demat.persist.pdf.bean.page07.IntroducerDeatails;
+import com.invest19.demat.persist.pdf.bean.page07.VerificationOfDocuments;
+import com.invest19.demat.persist.pdf.bean.page07.AdditionalDetails.ContactNoteReference;
+import com.invest19.demat.persist.pdf.bean.page07.IntroducerDeatails.IntroducersStatus;
+import com.invest19.demat.persist.pdf.bean.page08.PartB;
 
 @RestController
 public class FilleData_Page06_TradingDematAccountRelatedDetails {

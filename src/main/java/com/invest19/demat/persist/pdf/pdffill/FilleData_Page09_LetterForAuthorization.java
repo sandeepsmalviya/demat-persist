@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.invest19.demat.persist.pdf.bean.page09.LetterForAuthorization;
 import com.invest19.demat.persist.pdf.bean.page10.Easi;
 import com.invest19.demat.persist.pdf.bean.page10.Easi.EasiAvailBasicServicesDematFacility;
 import com.invest19.demat.persist.pdf.bean.page10.OptionFormForIssueOfDisBooklet;
@@ -25,7 +26,6 @@ import com.invest19.demat.persist.pdf.bean.page11.FatcaDeclarationForIndividual;
 import com.invest19.demat.persist.pdf.bean.page11.FatcaDeclarationForIndividual.FdfiCitizenship;
 import com.invest19.demat.persist.pdf.bean.page11.FatcaDeclarationForIndividual.FdfiSourceOfWealth;
 import com.invest19.demat.persist.pdf.bean.page12.ConsentLetterForAvailingBseStarMfFacility;
-import com.invest19.demat.persist.pdf.bean.page9.LetterForAuthorization;
 
 @RestController
 public class FilleData_Page09_LetterForAuthorization {

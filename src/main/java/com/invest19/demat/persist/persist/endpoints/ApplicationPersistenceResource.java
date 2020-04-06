@@ -2,9 +2,12 @@ package com.invest19.demat.persist.persist.endpoints;
 
 import java.text.ParseException;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,20 +16,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.invest19.demat.persist.pdf.bean.PdfApplicationForm;
+import com.invest19.demat.persist.pdf.bean.page04.KycApplicationForm;
+import com.invest19.demat.persist.pdf.bean.page05.AdditionalKycForm;
+import com.invest19.demat.persist.pdf.bean.page06.TradingDematAccountRelatedDetails;
+import com.invest19.demat.persist.pdf.bean.page07.ForOfficeUseOnly;
+import com.invest19.demat.persist.pdf.bean.page09.LetterForAuthorization;
 import com.invest19.demat.persist.pdf.bean.page13.NominationDetails;
 import com.invest19.demat.persist.pdf.bean.page15.TariffSheet;
 import com.invest19.demat.persist.pdf.bean.page16.PowerOfAttorney;
 import com.invest19.demat.persist.pdf.bean.page18.AcknowledgementLetter;
-import com.invest19.demat.persist.pdf.bean.page4.KycApplicationForm;
-import com.invest19.demat.persist.pdf.bean.page5.AdditionalKycForm;
-import com.invest19.demat.persist.pdf.bean.page6.TradingDematAccountRelatedDetails;
-import com.invest19.demat.persist.pdf.bean.page7.ForOfficeUseOnly;
-import com.invest19.demat.persist.pdf.bean.page9.LetterForAuthorization;
 import com.invest19.demat.persist.pdf.pdffill.CombinedFormFill;
 import com.invest19.demat.persist.persist.services.ApplicationPersistenceService;
 
-@RequestMapping("/demat")
 @RestController
+@RequestMapping("/demat-persist")
+@CrossOrigin(origins = "*")
 public class ApplicationPersistenceResource {
 
 	@Autowired
@@ -43,23 +47,23 @@ public class ApplicationPersistenceResource {
 		return new ResponseEntity<>(pdfApplicationFrom, HttpStatus.OK);
 	}
 
-
-	@GetMapping("/form/{userId}")
+	@GetMapping("/pdf-form/{userId}")
 	public ResponseEntity<PdfApplicationForm> getPdfApplicationForm(@PathVariable("userId") String userId) {
 		PdfApplicationForm pdfApplicationFrom = applicationPersistenceService.find(userId);
 		return new ResponseEntity<>(pdfApplicationFrom, HttpStatus.OK);
 
 	}
 
-	@PostMapping("/form-save")
-	public ResponseEntity<PdfApplicationForm> save(@RequestBody PdfApplicationForm pdfApplicationFrom) {
+	@PostMapping("/pdf-form/{userId}")
+	public ResponseEntity<PdfApplicationForm> save(@PathVariable("userId") String userId,
+			@Valid @RequestBody PdfApplicationForm pdfApplicationFrom) {
 
 		PdfApplicationForm pdfApplicationFrom1 = applicationPersistenceService.save(pdfApplicationFrom);
 		return new ResponseEntity<>(pdfApplicationFrom1, HttpStatus.CREATED);
 
 	}
 
-	@GetMapping("/kyc/{userId}")
+	@GetMapping("/pdf-form/kyc/{userId}")
 	public ResponseEntity<KycApplicationForm> getKycApplicationForm(@PathVariable("userId") String userId) {
 
 		PdfApplicationForm pdfApplicationFrom = applicationPersistenceService.find(userId);
@@ -68,7 +72,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@PostMapping("/kyc/{userId}")
+	@PostMapping("/pdf-form/kyc/{userId}")
 	public ResponseEntity<KycApplicationForm> saveKycApplicationFrom(@PathVariable("userId") String userId,
 			@RequestBody KycApplicationForm kycApplicationForm) {
 
@@ -82,7 +86,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@GetMapping("/adkyc/{userId}")
+	@GetMapping("/pdf-form/adkyc/{userId}")
 	public ResponseEntity<AdditionalKycForm> getAdditionalKycForm(@PathVariable("userId") String userId) {
 
 		PdfApplicationForm pdfApplicationFrom = applicationPersistenceService.find(userId);
@@ -91,7 +95,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@PostMapping("/adkyc/{userId}")
+	@PostMapping("/pdf-form/adkyc/{userId}")
 	public ResponseEntity<AdditionalKycForm> saveAdditionalKycForm(@PathVariable("userId") String userId,
 			@RequestBody AdditionalKycForm additionalKycForm) {
 
@@ -105,7 +109,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@GetMapping("/tdard/{userId}")
+	@GetMapping("/pdf-form/tdard/{userId}")
 	public ResponseEntity<TradingDematAccountRelatedDetails> getTradingDematAccountRelatedDetails(
 			@PathVariable("userId") String userId) {
 
@@ -118,7 +122,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@PostMapping("/tdard/{userId}")
+	@PostMapping("/pdf-form/tdard/{userId}")
 	public ResponseEntity<TradingDematAccountRelatedDetails> saveTradingDematAccountRelatedDetails(
 			@PathVariable("userId") String userId,
 			@RequestBody TradingDematAccountRelatedDetails tradingDematAccountRelatedDetails) {
@@ -135,7 +139,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@GetMapping("/tdard/fouo/{userId}")
+	@GetMapping("/pdf-form/tdard/fouo/{userId}")
 	public ResponseEntity<ForOfficeUseOnly> getForOfficeUseOnly(@PathVariable("userId") String userId) {
 
 		PdfApplicationForm pdfApplicationFrom = applicationPersistenceService.find(userId);
@@ -147,7 +151,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@PostMapping("/tdard/fouo/{userId}")
+	@PostMapping("/pdf-form/tdard/fouo/{userId}")
 	public ResponseEntity<ForOfficeUseOnly> saveForOfficeUseOnly(@PathVariable("userId") String userId,
 			@RequestBody ForOfficeUseOnly forOfficeUseOnly) {
 
@@ -166,7 +170,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@GetMapping("/lfa/{userId}")
+	@GetMapping("/pdf-form/lfa/{userId}")
 	public ResponseEntity<LetterForAuthorization> getLetterForAuthorization(@PathVariable("userId") String userId) {
 
 		PdfApplicationForm pdfApplicationFrom = applicationPersistenceService.find(userId);
@@ -175,7 +179,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@PostMapping("/lfa/{userId}")
+	@PostMapping("/pdf-form/lfa/{userId}")
 	public ResponseEntity<LetterForAuthorization> saveLetterForAuthorization(@PathVariable("userId") String userId,
 			@RequestBody LetterForAuthorization letterForAuthorization) {
 
@@ -189,7 +193,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@GetMapping("/nd/{userId}")
+	@GetMapping("/pdf-form/nd/{userId}")
 	public ResponseEntity<NominationDetails> getNominationDetails(@PathVariable("userId") String userId) {
 
 		PdfApplicationForm pdfApplicationFrom = applicationPersistenceService.find(userId);
@@ -198,7 +202,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@PostMapping("/nd/{userId}")
+	@PostMapping("/pdf-form/nd/{userId}")
 	public ResponseEntity<NominationDetails> saveNominationDetails(@PathVariable("userId") String userId,
 			@RequestBody NominationDetails nominationDetails) {
 
@@ -212,8 +216,8 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@GetMapping("/poa/{userId}")
-	public ResponseEntity<PowerOfAttorney>  getPowerOfAttorney(@PathVariable("userId") String userId) {
+	@GetMapping("/pdf-form/poa/{userId}")
+	public ResponseEntity<PowerOfAttorney> getPowerOfAttorney(@PathVariable("userId") String userId) {
 
 		PdfApplicationForm pdfApplicationFrom = applicationPersistenceService.find(userId);
 		PowerOfAttorney powerOfAttorney = pdfApplicationFrom.getPowerOfAttorney();
@@ -221,7 +225,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@PostMapping("/poa/{userId}")
+	@PostMapping("/pdf-form/poa/{userId}")
 	public ResponseEntity<PowerOfAttorney> savePowerOfAttorney(@PathVariable("userId") String userId,
 			@RequestBody PowerOfAttorney powerOfAttorney) {
 
@@ -235,7 +239,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@GetMapping("/ts/{userId}")
+	@GetMapping("/pdf-form/ts/{userId}")
 	public ResponseEntity<TariffSheet> getTariffSheet(@PathVariable("userId") String userId) {
 
 		PdfApplicationForm pdfApplicationFrom = applicationPersistenceService.find(userId);
@@ -244,8 +248,9 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@PostMapping("/ts/{userId}")
-	public ResponseEntity<TariffSheet> saveTariffSheet(@PathVariable("userId") String userId, @RequestBody TariffSheet tariffSheet) {
+	@PostMapping("/pdf-form/ts/{userId}")
+	public ResponseEntity<TariffSheet> saveTariffSheet(@PathVariable("userId") String userId,
+			@RequestBody TariffSheet tariffSheet) {
 
 		PdfApplicationForm pdfApplicationFrom = applicationPersistenceService.find(userId);
 		pdfApplicationFrom.setTariffSheet(tariffSheet);
@@ -257,7 +262,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@GetMapping("/al/{userId}")
+	@GetMapping("/pdf-form/al/{userId}")
 	public ResponseEntity<AcknowledgementLetter> getAcknowledgementLetter(@PathVariable("userId") String userId) {
 
 		PdfApplicationForm pdfApplicationFrom = applicationPersistenceService.find(userId);
@@ -266,7 +271,7 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	@PostMapping("/al/{userId}")
+	@PostMapping("/pdf-form/al/{userId}")
 	public ResponseEntity<AcknowledgementLetter> saveAcknowledgementLetter(@PathVariable("userId") String userId,
 			@RequestBody AcknowledgementLetter tariffSheet) {
 

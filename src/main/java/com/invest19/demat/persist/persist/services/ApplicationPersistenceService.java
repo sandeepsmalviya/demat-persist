@@ -3,10 +3,11 @@ package com.invest19.demat.persist.persist.services;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.invest19.demat.persist.exception.ApplicationEntiyNotFoundException;
 import com.invest19.demat.persist.pdf.bean.PdfApplicationForm;
 import com.invest19.demat.persist.persist.repository.PdfApplicationFromRepository;
 
@@ -16,28 +17,25 @@ public class ApplicationPersistenceService {
 	@Autowired
 	PdfApplicationFromRepository pdfApplicationFromRepository;
 
-	public PdfApplicationForm save(PdfApplicationForm pdfApplicationFrom) throws ApplicationEntiyNotFoundException {
+	public PdfApplicationForm save(PdfApplicationForm pdfApplicationFrom) {
 
-		try {
-			PdfApplicationForm pdfApplicationFormReturnValue = pdfApplicationFromRepository.save(pdfApplicationFrom);
-			return pdfApplicationFormReturnValue;
-		} catch (Exception exception) {
-			throw new ApplicationEntiyNotFoundException(exception);
-		}
+		PdfApplicationForm pdfApplicationFormReturnValue = pdfApplicationFromRepository.save(pdfApplicationFrom);
+		return pdfApplicationFormReturnValue;
+
 	}
 
-	public PdfApplicationForm find(String userId) throws ApplicationEntiyNotFoundException {
+	public PdfApplicationForm find(String userId) {
 
 		try {
 			Optional<PdfApplicationForm> optional = pdfApplicationFromRepository.findById(userId);
 			PdfApplicationForm pdfApplicationForm = optional.get();
 			return pdfApplicationForm;
 		} catch (NoSuchElementException exception) {
-			String message = "Entity with id=" + userId + " is not found ";
-			throw new ApplicationEntiyNotFoundException(message, exception);
+			String message = "Entity with id=" + userId + " is not found " + "\n" + exception.getLocalizedMessage();
+			throw new EntityNotFoundException(message);
 		} catch (Exception exception) {
-			String message = "Entity with id=" + userId + " is not found ";
-			throw new ApplicationEntiyNotFoundException(message, exception);
+			String message = "Entity with id=" + userId + " is not found " + "\n" + exception.getLocalizedMessage();
+			throw new EntityNotFoundException(message);
 		}
 	}
 }

@@ -7,22 +7,22 @@ import java.text.SimpleDateFormat;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.invest19.demat.persist.pdf.bean.page5.AdditionalKycForm;
-import com.invest19.demat.persist.pdf.bean.page5.DepositoryParticipant;
-import com.invest19.demat.persist.pdf.bean.page5.DetailsOfGuardian;
-import com.invest19.demat.persist.pdf.bean.page5.DetailsOfGuardian.AccountStatementRequired;
-import com.invest19.demat.persist.pdf.bean.page5.DetailsOfGuardian.InstructDpToAcceptAllPledgeInstructions;
-import com.invest19.demat.persist.pdf.bean.page5.DetailsOfGuardian.InstructDpToReceiveEachAndEveryCredit;
-import com.invest19.demat.persist.pdf.bean.page5.DetailsOfGuardian.ReceiveAnnualReport;
-import com.invest19.demat.persist.pdf.bean.page5.DetailsOfGuardian.ReceiveDividentInterestDirectlyInBankAccount;
-import com.invest19.demat.persist.pdf.bean.page5.DetailsOfGuardian.SendElectronicTransactioCumHolding;
-import com.invest19.demat.persist.pdf.bean.page5.DetailsOfGuardian.ShareEmailIdWithTheRta;
-import com.invest19.demat.persist.pdf.bean.page5.HolderDetails;
-import com.invest19.demat.persist.pdf.bean.page5.TypeOfAccount;
-import com.invest19.demat.persist.pdf.bean.page5.TypeOfAccount.ForeignNational;
-import com.invest19.demat.persist.pdf.bean.page5.TypeOfAccount.Individual;
-import com.invest19.demat.persist.pdf.bean.page5.TypeOfAccount.Nri;
-import com.invest19.demat.persist.pdf.bean.page5.TypeOfAccount.Type;
+import com.invest19.demat.persist.pdf.bean.page05.AdditionalKycForm;
+import com.invest19.demat.persist.pdf.bean.page05.DepositoryParticipant;
+import com.invest19.demat.persist.pdf.bean.page05.DetailsOfGuardian;
+import com.invest19.demat.persist.pdf.bean.page05.HolderDetails;
+import com.invest19.demat.persist.pdf.bean.page05.TypeOfAccount;
+import com.invest19.demat.persist.pdf.bean.page05.DetailsOfGuardian.AccountStatementRequired;
+import com.invest19.demat.persist.pdf.bean.page05.DetailsOfGuardian.InstructDpToAcceptAllPledgeInstructions;
+import com.invest19.demat.persist.pdf.bean.page05.DetailsOfGuardian.InstructDpToReceiveEachAndEveryCredit;
+import com.invest19.demat.persist.pdf.bean.page05.DetailsOfGuardian.ReceiveAnnualReport;
+import com.invest19.demat.persist.pdf.bean.page05.DetailsOfGuardian.ReceiveDividentInterestDirectlyInBankAccount;
+import com.invest19.demat.persist.pdf.bean.page05.DetailsOfGuardian.SendElectronicTransactioCumHolding;
+import com.invest19.demat.persist.pdf.bean.page05.DetailsOfGuardian.ShareEmailIdWithTheRta;
+import com.invest19.demat.persist.pdf.bean.page05.TypeOfAccount.ForeignNational;
+import com.invest19.demat.persist.pdf.bean.page05.TypeOfAccount.Individual;
+import com.invest19.demat.persist.pdf.bean.page05.TypeOfAccount.Nri;
+import com.invest19.demat.persist.pdf.bean.page05.TypeOfAccount.Type;
 
 import lombok.extern.slf4j.Slf4j;
 

@@ -7,17 +7,17 @@ import java.text.SimpleDateFormat;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.invest19.demat.persist.pdf.bean.page4.AddressDetails;
-import com.invest19.demat.persist.pdf.bean.page4.AddressDetails.AddressType;
-import com.invest19.demat.persist.pdf.bean.page4.AddressDetails.ProofOfAddress;
-import com.invest19.demat.persist.pdf.bean.page4.Declaration;
-import com.invest19.demat.persist.pdf.bean.page4.Declaration.AccountType;
-import com.invest19.demat.persist.pdf.bean.page4.Declaration.ApplicationType;
-import com.invest19.demat.persist.pdf.bean.page4.IdentityDetails;
-import com.invest19.demat.persist.pdf.bean.page4.IdentityDetails.Gender;
-import com.invest19.demat.persist.pdf.bean.page4.IdentityDetails.MaritalStatus;
-import com.invest19.demat.persist.pdf.bean.page4.IdentityDetails.ResidentialStatus;
-import com.invest19.demat.persist.pdf.bean.page4.KycApplicationForm;
+import com.invest19.demat.persist.pdf.bean.page04.AddressDetails;
+import com.invest19.demat.persist.pdf.bean.page04.Declaration;
+import com.invest19.demat.persist.pdf.bean.page04.IdentityDetails;
+import com.invest19.demat.persist.pdf.bean.page04.KycApplicationForm;
+import com.invest19.demat.persist.pdf.bean.page04.AddressDetails.AddressType;
+import com.invest19.demat.persist.pdf.bean.page04.AddressDetails.ProofOfAddress;
+import com.invest19.demat.persist.pdf.bean.page04.Declaration.AccountType;
+import com.invest19.demat.persist.pdf.bean.page04.Declaration.ApplicationType;
+import com.invest19.demat.persist.pdf.bean.page04.IdentityDetails.Gender;
+import com.invest19.demat.persist.pdf.bean.page04.IdentityDetails.MaritalStatus;
+import com.invest19.demat.persist.pdf.bean.page04.IdentityDetails.ResidentialStatus;
 
 import lombok.extern.slf4j.Slf4j;
 
