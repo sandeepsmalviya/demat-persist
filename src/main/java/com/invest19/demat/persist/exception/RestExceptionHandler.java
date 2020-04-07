@@ -1,7 +1,6 @@
 package com.invest19.demat.persist.exception;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
-import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.core.Ordered;
@@ -106,8 +105,6 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 		return buildResponseEntity(apiError);
 	}
 
-
-
 	/**
 	 * Handle HttpMessageNotReadableException. Happens when request JSON is
 	 * malformed.
@@ -167,6 +164,16 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 	 */
 	@ExceptionHandler(javax.persistence.EntityNotFoundException.class)
 	protected ResponseEntity<Object> handleEntityNotFound(javax.persistence.EntityNotFoundException ex) {
+		ErrorMessage errorMessage = new ErrorMessage(HttpStatus.NOT_FOUND, ex.getLocalizedMessage(), ex);
+		System.out.println("I am called");
+		return buildResponseEntity(errorMessage);
+	}
+
+	// org.springframework.web.client.HttpClientErrorException$NotFound: 404 :
+
+	@ExceptionHandler(org.springframework.web.client.HttpClientErrorException.class)
+	protected ResponseEntity<Object> handleHttpClientErrorException$NotFound(
+			org.springframework.web.client.HttpClientErrorException ex) {
 		return buildResponseEntity(new ErrorMessage(HttpStatus.NOT_FOUND, ex));
 	}
 

@@ -23,7 +23,7 @@ public class RestTemplateDemoResource {
 	public ResponseEntity<PdfApplicationForm> getData(@PathVariable String userId) {
 
 		RestTemplate restTemplate = new RestTemplate();
-		String url = "http://localhost:8080/demat/form/" + userId;
+		String url = "http://localhost:8080/demat-persist/pdf-form/"+ userId;
 		ResponseEntity<PdfApplicationForm> result = restTemplate.getForEntity(url, PdfApplicationForm.class);
 
 		PdfApplicationForm applicationFormReturn = null;
@@ -42,7 +42,7 @@ public class RestTemplateDemoResource {
 			@RequestBody PdfApplicationForm applicationForm) throws URISyntaxException {
 
 		RestTemplate restTemplate = new RestTemplate();
-		String url = "http://localhost:8080/demat/form-save/";
+		String url = "http://localhost:8080/demat-persist/pdf-form/"+ userId;
 
 		URI uri = new URI(url);
 
