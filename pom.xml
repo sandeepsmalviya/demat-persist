@@ -9,9 +9,11 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
+	
 	<groupId>com.invest19.demat.persist</groupId>
 	<artifactId>demat-persist</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	
 	<name>demat-persist</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -129,7 +131,6 @@
 		</profile>
 	</profiles>
 
-	<!-- <build> <plugins> <plugin> <groupId>org.springframework.boot</groupId> 
-		<artifactId>spring-boot-maven-plugin</artifactId> </plugin> </plugins> </build> -->
+	
 
 </project>
