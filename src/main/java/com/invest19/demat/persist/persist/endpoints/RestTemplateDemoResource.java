@@ -16,6 +16,9 @@ import org.springframework.web.client.RestTemplate;
 
 import com.invest19.demat.persist.pdf.bean.PdfApplicationForm;
 
+import springfox.documentation.annotations.ApiIgnore;
+
+@ApiIgnore 
 @RestController
 public class RestTemplateDemoResource {
 

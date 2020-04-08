@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 
 import com.invest19.demat.persist.pdf.bean.PdfApplicationForm;
 
+import springfox.documentation.annotations.ApiIgnore;
+
+@ApiIgnore
 @Component
 public class CombinedFormFill {
 	

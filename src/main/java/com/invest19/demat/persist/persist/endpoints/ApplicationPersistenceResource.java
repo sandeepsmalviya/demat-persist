@@ -28,6 +28,11 @@ import com.invest19.demat.persist.pdf.bean.page18.AcknowledgementLetter;
 import com.invest19.demat.persist.pdf.pdffill.CombinedFormFill;
 import com.invest19.demat.persist.persist.services.ApplicationPersistenceService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
+@Api(value = "/demat-persist", description = "DB CRUD Operations")
+
 @RestController
 @RequestMapping("/demat-persist")
 @CrossOrigin(origins = "*")
@@ -39,6 +44,7 @@ public class ApplicationPersistenceResource {
 	@Autowired
 	private CombinedFormFill combinedFormFill;
 
+	
 	@GetMapping("/save-db-sample-data")
 	public ResponseEntity<PdfApplicationForm> savePdfApplicationFormFromSampleData() throws ParseException {
 
@@ -47,6 +53,10 @@ public class ApplicationPersistenceResource {
 		return new ResponseEntity<>(pdfApplicationFrom, HttpStatus.OK);
 	}
 
+	@ApiOperation(value = "Save PdfApplicationForm",
+		    notes = "Save whole PdfApplicationForm ",
+		    response = PdfApplicationForm.class
+		    )
 	@GetMapping("/pdf-form/{userId}")
 	public ResponseEntity<PdfApplicationForm> getPdfApplicationForm(@PathVariable("userId") String userId) {
 		PdfApplicationForm pdfApplicationFrom = applicationPersistenceService.find(userId);

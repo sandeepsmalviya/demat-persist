@@ -3,7 +3,7 @@ Transform: AWS::Serverless-2016-10-31
 Description: Lambda with spring boot.
 
 Resources:
-  LambdaSpringBootFunction:
+  DematePersistFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: com.invest19.demat.persist.LambdaHandler::handleRequest
@@ -11,7 +11,7 @@ Resources:
       CodeUri: target/demat-persist-0.0.1-SNAPSHOT.jar
       MemorySize: 1512
       Policies: AWSLambdaBasicExecutionRole
-      Timeout: 60
+      Timeout: 120
       Events:
         GetResource:
           Type: Api
@@ -20,8 +20,8 @@ Resources:
             Method: any
 
 Outputs:
-  LambdaSpringBootApi:
+  DematePersistApi:
     Description: URL for application
     Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod'
     Export:
-      Name: LambdaSpringBootApi
+      Name: DematePersistApi
