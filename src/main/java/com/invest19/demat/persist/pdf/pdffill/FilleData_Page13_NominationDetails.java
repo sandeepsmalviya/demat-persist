@@ -18,6 +18,9 @@ import com.invest19.demat.persist.pdf.bean.page13.Nominee3Guardian;
 import com.invest19.demat.persist.pdf.bean.page14.NominationDetailsDeclaration;
 import com.invest19.demat.persist.pdf.bean.page14.NominationDetailsDeclaration.NominationDetailsHereByDeclareDeclaration;
 
+import springfox.documentation.annotations.ApiIgnore;
+
+@ApiIgnore
 @RestController
 public class FilleData_Page13_NominationDetails {
 

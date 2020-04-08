@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.invest19.demat.persist.pdf.bean.page15.TariffSheet;
 import com.invest19.demat.persist.pdf.bean.page15.TariffSheet.ChargeStructureEnum;
 
+import springfox.documentation.annotations.ApiIgnore;
+
+@ApiIgnore
 @RestController
 public class FilleData_Page15_TariffSheet {
 

@@ -25,7 +25,9 @@ import com.invest19.demat.persist.pdf.bean.page05.TypeOfAccount.Nri;
 import com.invest19.demat.persist.pdf.bean.page05.TypeOfAccount.Type;
 
 import lombok.extern.slf4j.Slf4j;
+import springfox.documentation.annotations.ApiIgnore;
 
+@ApiIgnore
 @RestController
 @Slf4j
 public class FilleData_Page05_AdditionalKycForm {

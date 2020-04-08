@@ -26,6 +26,9 @@ import com.invest19.demat.persist.pdf.bean.page07.AdditionalDetails.ContactNoteR
 import com.invest19.demat.persist.pdf.bean.page07.IntroducerDeatails.IntroducersStatus;
 import com.invest19.demat.persist.pdf.bean.page08.PartB;
 
+import springfox.documentation.annotations.ApiIgnore;
+
+@ApiIgnore
 @RestController
 public class FilleData_Page06_TradingDematAccountRelatedDetails {
 

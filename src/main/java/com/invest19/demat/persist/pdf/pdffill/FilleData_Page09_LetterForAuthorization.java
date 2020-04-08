@@ -27,6 +27,9 @@ import com.invest19.demat.persist.pdf.bean.page11.FatcaDeclarationForIndividual.
 import com.invest19.demat.persist.pdf.bean.page11.FatcaDeclarationForIndividual.FdfiSourceOfWealth;
 import com.invest19.demat.persist.pdf.bean.page12.ConsentLetterForAvailingBseStarMfFacility;
 
+import springfox.documentation.annotations.ApiIgnore;
+
+@ApiIgnore
 @RestController
 public class FilleData_Page09_LetterForAuthorization {
 

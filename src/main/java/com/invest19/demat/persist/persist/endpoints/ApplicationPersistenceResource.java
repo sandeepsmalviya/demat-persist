@@ -54,7 +54,6 @@ public class ApplicationPersistenceResource {
 		return new ResponseEntity<>(pdfApplicationFrom, HttpStatus.OK);
 	}
 
-	
 	@ApiOperation(value = "Return count of total records", notes = "Retrive count of total number  pdf-application-form records  from database", response = Long.class)
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "SUCCESS"),
 			@ApiResponse(code = 400, message = "Invalid Data supplied"),
@@ -66,13 +65,11 @@ public class ApplicationPersistenceResource {
 
 	}
 
-	
-	
-	
 	@ApiOperation(value = "Finds PdfApplicationForm by userId", notes = "Retrive whole pdf application form by supplying userId from database", response = PdfApplicationForm.class)
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "SUCCESS"),
 			@ApiResponse(code = 400, message = "Invalid Data supplied"),
 			@ApiResponse(code = 404, message = "UserId not found") })
+
 	@GetMapping("/pdf-form/{userId}")
 	public ResponseEntity<PdfApplicationForm> getPdfApplicationForm(@PathVariable("userId") String userId) {
 		PdfApplicationForm pdfApplicationFrom = applicationPersistenceService.find(userId);
