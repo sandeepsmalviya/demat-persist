@@ -38,4 +38,25 @@ public class ApplicationPersistenceService {
 			throw new EntityNotFoundException(message);
 		}
 	}
+
+	public void delete(String userId) {
+
+		try {
+			pdfApplicationFromRepository.deleteById(userId);
+		} catch (NoSuchElementException exception) {
+			String message = "Entity with id=" + userId + " is not found for delete " + "\n"
+					+ exception.getLocalizedMessage();
+			throw new EntityNotFoundException(message);
+		} catch (Exception exception) {
+			String message = "Entity with id=" + userId + " is not found for delete " + "\n"
+					+ exception.getLocalizedMessage();
+			throw new EntityNotFoundException(message);
+		}
+	}
+	
+	
+	public long count() {
+		return pdfApplicationFromRepository.count();
+	}
+
 }

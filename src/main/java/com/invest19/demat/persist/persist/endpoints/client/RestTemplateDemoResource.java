@@ -1,4 +1,4 @@
-package com.invest19.demat.persist.persist.endpoints;
+package com.invest19.demat.persist.persist.endpoints.client;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -16,6 +16,9 @@ import org.springframework.web.client.RestTemplate;
 
 import com.invest19.demat.persist.pdf.bean.PdfApplicationForm;
 
+import springfox.documentation.annotations.ApiIgnore;
+
+@ApiIgnore
 @RestController
 public class RestTemplateDemoResource {
 
@@ -23,7 +26,7 @@ public class RestTemplateDemoResource {
 	public ResponseEntity<PdfApplicationForm> getData(@PathVariable String userId) {
 
 		RestTemplate restTemplate = new RestTemplate();
-		String url = "http://localhost:8080/demat-persist/pdf-form/"+ userId;
+		String url = "http://localhost:8080/demat-persist/pdf-form/" + userId;
 		ResponseEntity<PdfApplicationForm> result = restTemplate.getForEntity(url, PdfApplicationForm.class);
 
 		PdfApplicationForm applicationFormReturn = null;
@@ -42,7 +45,7 @@ public class RestTemplateDemoResource {
 			@RequestBody PdfApplicationForm applicationForm) throws URISyntaxException {
 
 		RestTemplate restTemplate = new RestTemplate();
-		String url = "http://localhost:8080/demat-persist/pdf-form/"+ userId;
+		String url = "http://localhost:8080/demat-persist/pdf-form/" + userId;
 
 		URI uri = new URI(url);
 
