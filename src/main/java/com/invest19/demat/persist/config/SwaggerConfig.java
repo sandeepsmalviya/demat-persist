@@ -50,5 +50,26 @@ public class SwaggerConfig {
 	                .build();
 	}
 	
+	
+//	@Bean
+//	public Docket api() {
+//		
+//		return new Docket(DocumentationType.SWAGGER_2).select()
+//				.apis(RequestHandlerSelectors.basePackage("com.invest19.demat.persist.persist.endpoints"))
+//				.paths(PathSelectors.ant("/api/**")).build().apiInfo(apiInfo());
+//	}
+//
+//	private ApiInfo apiInfo() {
+//
+//		ApiInfo apiInfo = new ApiInfoBuilder().version("1.0").title("Demat Persistance Rest Api")
+//				.description("These apis helps to save data to database")
+//				.contact(new Contact("Sandeep Malviya", "Sandeep URL", "sandeepmalviya@gmail.com"))
+//				.license("License of API : All Rights are reserved with developer")
+//				.licenseUrl("no licence url is available")
+//				.termsOfServiceUrl("Terms of service : Development And Deveting Support is For 4 Weeks")
+//				.version("1.0.0").build();
+//
+//		return apiInfo;
+//	}
 
 }
