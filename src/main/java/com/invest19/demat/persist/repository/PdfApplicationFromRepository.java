@@ -1,4 +1,4 @@
-package com.invest19.demat.persist.persist.repository;
+package com.invest19.demat.persist.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

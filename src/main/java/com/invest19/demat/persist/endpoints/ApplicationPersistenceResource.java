@@ -1,4 +1,4 @@
-package com.invest19.demat.persist.persist.endpoints;
+package com.invest19.demat.persist.endpoints;
 
 import java.text.ParseException;
 
@@ -27,7 +27,7 @@ import com.invest19.demat.persist.pdf.bean.page15.TariffSheet;
 import com.invest19.demat.persist.pdf.bean.page16.PowerOfAttorney;
 import com.invest19.demat.persist.pdf.bean.page18.AcknowledgementLetter;
 import com.invest19.demat.persist.pdf.pdffill.CombinedFormFill;
-import com.invest19.demat.persist.persist.services.ApplicationPersistenceService;
+import com.invest19.demat.persist.services.ApplicationPersistenceService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

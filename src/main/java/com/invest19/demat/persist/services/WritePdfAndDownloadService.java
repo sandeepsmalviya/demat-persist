@@ -1,4 +1,4 @@
-package com.invest19.demat.persist.persist.services;
+package com.invest19.demat.persist.services;
 
 import org.springframework.stereotype.Service;
 

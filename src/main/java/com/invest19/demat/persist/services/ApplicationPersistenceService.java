@@ -1,4 +1,4 @@
-package com.invest19.demat.persist.persist.services;
+package com.invest19.demat.persist.services;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.invest19.demat.persist.pdf.bean.PdfApplicationForm;
-import com.invest19.demat.persist.persist.repository.PdfApplicationFromRepository;
+import com.invest19.demat.persist.repository.PdfApplicationFromRepository;
 
 @Service
 public class ApplicationPersistenceService {

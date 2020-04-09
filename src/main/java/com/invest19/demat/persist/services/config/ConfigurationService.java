@@ -1,4 +1,4 @@
-package com.invest19.demat.persist.persist.services.config;
+package com.invest19.demat.persist.services.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

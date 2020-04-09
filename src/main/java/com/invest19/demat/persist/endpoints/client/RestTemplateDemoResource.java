@@ -1,4 +1,4 @@
-package com.invest19.demat.persist.persist.endpoints.client;
+package com.invest19.demat.persist.endpoints.client;
 
 import java.net.URI;
 import java.net.URISyntaxException;

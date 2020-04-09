@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-import com.invest19.demat.persist.persist.services.config.ConfigurationService;
+import com.invest19.demat.persist.services.config.ConfigurationService;
 
 @SpringBootApplication
 public class DematPersistApplication extends SpringBootServletInitializer {
