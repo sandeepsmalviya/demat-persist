@@ -9,21 +9,22 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.invest19.demat.persist.pdf.bean.page06.DealingsThroughOtherMembers;
 import com.invest19.demat.persist.pdf.bean.page06.DetailsOfRelatedPerson;
+import com.invest19.demat.persist.pdf.bean.page06.DetailsOfRelatedPerson.RpType;
 import com.invest19.demat.persist.pdf.bean.page06.PastActions;
 import com.invest19.demat.persist.pdf.bean.page06.PrimaryBankingAccount;
-import com.invest19.demat.persist.pdf.bean.page06.PrimaryDepositoryAccount;
-import com.invest19.demat.persist.pdf.bean.page06.TradingDematAccountRelatedDetails;
-import com.invest19.demat.persist.pdf.bean.page06.DetailsOfRelatedPerson.RpType;
 import com.invest19.demat.persist.pdf.bean.page06.PrimaryBankingAccount.AccountType;
+import com.invest19.demat.persist.pdf.bean.page06.PrimaryDepositoryAccount;
 import com.invest19.demat.persist.pdf.bean.page06.PrimaryDepositoryAccount.DpType;
+import com.invest19.demat.persist.pdf.bean.page06.TradingDematAccountRelatedDetails;
 import com.invest19.demat.persist.pdf.bean.page07.AdditionalDetails;
+import com.invest19.demat.persist.pdf.bean.page07.AdditionalDetails.ContactNoteReference;
 import com.invest19.demat.persist.pdf.bean.page07.ClientsInterview;
 import com.invest19.demat.persist.pdf.bean.page07.ForOfficeUseOnly;
 import com.invest19.demat.persist.pdf.bean.page07.InPersonVerification;
 import com.invest19.demat.persist.pdf.bean.page07.IntroducerDeatails;
-import com.invest19.demat.persist.pdf.bean.page07.VerificationOfDocuments;
-import com.invest19.demat.persist.pdf.bean.page07.AdditionalDetails.ContactNoteReference;
 import com.invest19.demat.persist.pdf.bean.page07.IntroducerDeatails.IntroducersStatus;
+import com.invest19.demat.persist.pdf.bean.page07.TradingDeclaration;
+import com.invest19.demat.persist.pdf.bean.page07.VerificationOfDocuments;
 import com.invest19.demat.persist.pdf.bean.page08.PartB;
 
 import springfox.documentation.annotations.ApiIgnore;
@@ -40,8 +41,6 @@ public class FilleData_Page06_TradingDematAccountRelatedDetails {
 	public TradingDematAccountRelatedDetails fill() throws ParseException {
 		TradingDematAccountRelatedDetails tdard = new TradingDematAccountRelatedDetails();
 
-		
-		
 		PrimaryBankingAccount primaryBankingAccount = new PrimaryBankingAccount();
 		tdard.setPrimaryBankingAccount(primaryBankingAccount);
 
@@ -57,6 +56,7 @@ public class FilleData_Page06_TradingDematAccountRelatedDetails {
 		primaryBankingAccount.setMicrNumber("123456789");
 		primaryBankingAccount.setPrimaryBankingAccountPincode("411007");
 		primaryBankingAccount.setPrimaryBankingAccountState("MAHARASHTRA");
+		primaryBankingAccount.setPrimaryBankingAccountCityTownVillage("PIMPRI");
 
 		PrimaryDepositoryAccount primaryDepositoryAccount = new PrimaryDepositoryAccount();
 		tdard.setPrimaryDepositoryAccount(primaryDepositoryAccount);
@@ -125,6 +125,13 @@ public class FilleData_Page06_TradingDematAccountRelatedDetails {
 		introducerDeatails.setNameOfTheIntroducer("bansaramji malviya");
 		introducerDeatails.setRelationshipWithTheIntroducer("father");
 
+		TradingDeclaration tradingDeclaration = new TradingDeclaration();
+		tdard.setTradingDeclaration(tradingDeclaration);
+		tradingDeclaration.setClientName("Declare-ClientName");
+		tradingDeclaration.setDeclarationPlace("declarationPlace- PUNE");
+		Date declarationTradingDate = new Date(sdf.parse("26011985").getTime());
+		tradingDeclaration.setDeclarationTradingDate(declarationTradingDate);
+
 		ForOfficeUseOnly forOfficeUseOnly = new ForOfficeUseOnly();
 		tdard.setForOfficeUseOnly(forOfficeUseOnly);
 
@@ -133,7 +140,6 @@ public class FilleData_Page06_TradingDematAccountRelatedDetails {
 		forOfficeUseOnly.setForOfficeUseOnlyEmployeeDesignation("JD");
 		Date officeuseDate = new Date(sdf.parse("26011984").getTime());
 		forOfficeUseOnly.setTradingOfficeuseDate(officeuseDate);
-
 
 		ClientsInterview clientsInterview = new ClientsInterview();
 		forOfficeUseOnly.setClientsInterview(clientsInterview);
@@ -165,8 +171,7 @@ public class FilleData_Page06_TradingDematAccountRelatedDetails {
 		partB.setClientsName("My client");
 		Date partBDate = new Date(sdf.parse("26011984").getTime());
 		partB.setPartBDate(partBDate);
-		
-		
+
 		return tdard;
 	}
 

@@ -4,7 +4,7 @@ import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
 
 import com.invest19.demat.persist.pdf.bean.page07.AdditionalDetails;
-import com.invest19.demat.persist.pdf.bean.page07.Declaration;
+import com.invest19.demat.persist.pdf.bean.page07.TradingDeclaration;
 import com.invest19.demat.persist.pdf.bean.page07.ForOfficeUseOnly;
 import com.invest19.demat.persist.pdf.bean.page07.IntroducerDeatails;
 import com.invest19.demat.persist.pdf.bean.page08.PartB;
@@ -46,7 +46,7 @@ public class TradingDematAccountRelatedDetails {
 	private IntroducerDeatails introducerDeatails;
 
 	@Embedded
-	private Declaration declaration;
+	private TradingDeclaration tradingDeclaration;
 
 	@Embedded
 	private ForOfficeUseOnly forOfficeUseOnly;

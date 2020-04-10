@@ -87,6 +87,7 @@ public class FilleData_Page04_KycApplicationForm {
 		addressDetails.setState2("MaharashtraMP");
 		addressDetails.setTelephoneOffice("07226224212");
 		addressDetails.setTelephoneResidential("020224212");
+		addressDetails.setAnyOtherInformation("anyOtherInformation");
 
 		declaration.setAccountType(AccountType.SIMPLIFIED);
 		declaration.setApplicationType(ApplicationType.UPDATE);
