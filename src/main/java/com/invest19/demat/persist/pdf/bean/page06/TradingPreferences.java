@@ -1,5 +1,7 @@
 package com.invest19.demat.persist.pdf.bean.page06;
 
+import java.sql.Date;
+
 import javax.persistence.Embeddable;
 
 import lombok.Getter;
@@ -14,6 +16,6 @@ import lombok.ToString;
 @Embeddable
 public class TradingPreferences {
 
-	private String tradingPreferencesDate;
+	private Date tradingPreferencesDate;
 
 }

@@ -16,6 +16,7 @@ import com.invest19.demat.persist.pdf.bean.page06.PrimaryBankingAccount.AccountT
 import com.invest19.demat.persist.pdf.bean.page06.PrimaryDepositoryAccount;
 import com.invest19.demat.persist.pdf.bean.page06.PrimaryDepositoryAccount.DpType;
 import com.invest19.demat.persist.pdf.bean.page06.TradingDematAccountRelatedDetails;
+import com.invest19.demat.persist.pdf.bean.page06.TradingPreferences;
 import com.invest19.demat.persist.pdf.bean.page07.AdditionalDetails;
 import com.invest19.demat.persist.pdf.bean.page07.AdditionalDetails.ContactNoteReference;
 import com.invest19.demat.persist.pdf.bean.page07.ClientsInterview;
@@ -67,6 +68,12 @@ public class FilleData_Page06_TradingDematAccountRelatedDetails {
 		primaryDepositoryAccount.setDepositoryParticipantName("sandeep malviya");
 		primaryDepositoryAccount.setDpType(DpType.CDSL);
 
+		TradingPreferences tradingPreferences = new TradingPreferences();
+		tdard.setTradingPreferences(tradingPreferences);
+		SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy");
+		Date tradingPreferencesDate = new Date(sdf.parse("27011984").getTime());
+		tradingPreferences.setTradingPreferencesDate(tradingPreferencesDate);
+
 		PastActions pastActions = new PastActions();
 		tdard.setPastActions(pastActions);
 		pastActions.setDetails("Past-Actions");
@@ -113,7 +120,6 @@ public class FilleData_Page06_TradingDematAccountRelatedDetails {
 		IntroducerDeatails introducerDeatails = new IntroducerDeatails();
 		tdard.setIntroducerDeatails(introducerDeatails);
 
-		SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy");
 		Date introducerDate = new Date(sdf.parse("26011984").getTime());
 		introducerDeatails.setIntroducerDate(introducerDate);
 
