@@ -1,6 +1,5 @@
 package com.invest19.demat.persist.services.config;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import lombok.Data;
@@ -8,9 +7,9 @@ import lombok.Data;
 @Service
 @Data
 public class ConfigurationService {
-
-	@Value("${my.application.message}")
-	private String myApplicationMessage;
+//
+//	@Value("${my.application.message}")
+//	private String myApplicationMessage;
 	
 	
 	/*
