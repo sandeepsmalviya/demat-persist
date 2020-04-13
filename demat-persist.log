@@ -1,0 +1,50 @@
+2020-04-13 19:13:12.705  INFO 7783 --- [main] c.i.d.p.DematPersistApplicationTests     : Starting DematPersistApplicationTests on aarti-IdeaPad with PID 7783 (started by aarti in /home/aarti/Development/projects/manikandan/microservices/demat-persist)
+2020-04-13 19:13:12.711  INFO 7783 --- [main] c.i.d.p.DematPersistApplicationTests     : The following profiles are active: qa
+2020-04-13 19:13:18.206  INFO 7783 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-13 19:13:18.712  INFO 7783 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 359ms. Found 1 JPA repository interfaces.
+2020-04-13 19:13:22.352  INFO 7783 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-13 19:13:23.261  INFO 7783 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-13 19:13:24.254  INFO 7783 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-13 19:13:25.154  INFO 7783 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-13 19:13:29.339  INFO 7783 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-13 19:13:29.401  INFO 7783 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2020-04-13 19:13:36.671  INFO 7783 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-13 19:13:36.687  INFO 7783 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-13 19:13:40.809  WARN 7783 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 19:13:42.044  INFO 7783 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-13 19:13:44.399  INFO 7783 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-13 19:13:46.772  INFO 7783 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-13 19:13:46.897  INFO 7783 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-13 19:13:47.108  INFO 7783 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-13 19:13:49.931  INFO 7783 --- [main] c.i.d.p.DematPersistApplicationTests     : Started DematPersistApplicationTests in 39.029 seconds (JVM running for 43.096)
+2020-04-13 19:13:51.066  INFO 7783 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-13 19:13:51.102  INFO 7783 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-13 19:13:51.105  INFO 7783 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-04-13 19:13:51.612  INFO 7783 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-13 19:13:51.632  INFO 7783 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-13 19:15:25.685  INFO 8063 --- [main] c.i.d.p.DematPersistApplicationTests     : Starting DematPersistApplicationTests on aarti-IdeaPad with PID 8063 (started by aarti in /home/aarti/Development/projects/manikandan/microservices/demat-persist)
+2020-04-13 19:15:25.735  INFO 8063 --- [main] c.i.d.p.DematPersistApplicationTests     : The following profiles are active: qa
+2020-04-13 19:15:34.957  INFO 8063 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-13 19:15:35.736  INFO 8063 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 692ms. Found 1 JPA repository interfaces.
+2020-04-13 19:15:42.068  INFO 8063 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-13 19:15:43.431  INFO 8063 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-13 19:15:44.498  INFO 8063 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-13 19:15:45.424  INFO 8063 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-13 19:15:50.576  INFO 8063 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-13 19:15:50.779  INFO 8063 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2020-04-13 19:16:02.278  WARN 8063 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2020-04-13 19:16:02.287  WARN 8063 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "pdf_application_form" does not exist, skipping
+2020-04-13 19:16:02.972  INFO 8063 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-13 19:16:03.040  INFO 8063 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-13 19:16:10.950  WARN 8063 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 19:16:13.217  INFO 8063 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-13 19:16:19.947  INFO 8063 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-13 19:16:23.608  INFO 8063 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-13 19:16:23.920  INFO 8063 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-13 19:16:24.556  INFO 8063 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-13 19:16:27.776  INFO 8063 --- [main] c.i.d.p.DematPersistApplicationTests     : Started DematPersistApplicationTests in 64.902 seconds (JVM running for 71.213)
+2020-04-13 19:16:28.782  INFO 8063 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-13 19:16:28.802  INFO 8063 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-13 19:16:28.804  INFO 8063 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-04-13 19:16:29.366  INFO 8063 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-13 19:16:29.440  INFO 8063 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
