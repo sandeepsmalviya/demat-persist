@@ -1,0 +1,10 @@
+#To Run it on local development machine
+
+java -jar demat-persist.jar --spring.profiles.active=dev
+
+
+
+
+#To Run it on aws cloud machine
+
+java -jar demat-persist.jar --spring.profiles.active=qa
