@@ -55,6 +55,7 @@ public class FilleData_Page04_KycApplicationForm {
 		identityDetails.setMaidenName("Surendra");
 		identityDetails.setMaritalStatus(MaritalStatus.MARRIED);
 		identityDetails.setMotherName("Santoshi");
+		identityDetails.setGender(Gender.FEMALE);
 
 		identityDetails.setNregaJob(true);
 		identityDetails.setNregaJobString("yet_to_be_tested");

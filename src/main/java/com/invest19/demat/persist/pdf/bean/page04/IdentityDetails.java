@@ -33,13 +33,10 @@ public class IdentityDetails {
 	@NotEmpty(message = "motherName can not be empty")
 	private String motherName;
 
-	@Enumerated(EnumType.ORDINAL)
+	@Enumerated(EnumType.STRING)
 	@NotNull(message = "gender can not be null")
 	private Gender gender;
 
-	@Enumerated(EnumType.STRING)
-	@NotNull(message = "gender can not be null")
-	private Gender gender1;
 
 	@Enumerated(EnumType.STRING)
 	private MaritalStatus maritalStatus;
