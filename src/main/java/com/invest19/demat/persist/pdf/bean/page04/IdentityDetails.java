@@ -65,15 +65,26 @@ public class IdentityDetails {
 	@Size(min = 12, max = 12, message = "Aadhar Number must be equal to 12 characters")
 	private String aadharNumber;
 
-	private boolean proofOfIdentitySubmittedForPANExemptUid;
-	private boolean proofOfIdentitySubmittedForPANExemptPassport;
-	private boolean proofOfIdentitySubmittedForPANExemptVoterId;
-	private boolean proofOfIdentitySubmittedForPANExemptDrivingLicence;
-	private boolean proofOfIdentitySubmittedForPANExemptOhers;
-	private boolean proofOfIdentitySubmittedForPANExemptNregaJob;
-	private String proofOfIdentitySubmittedForPANExemptOthers;
-	private String nregaJob;
-
+//	private boolean proofOfIdentitySubmittedForPANExemptUid;
+//	private boolean proofOfIdentitySubmittedForPANExemptPassport;
+//	private boolean proofOfIdentitySubmittedForPANExemptVoterId;
+//	private boolean proofOfIdentitySubmittedForPANExemptDrivingLicence;
+//	private boolean proofOfIdentitySubmittedForPANExemptOhers;
+//	
+//	private String proofOfIdentitySubmittedForPANExemptOthers;
+//	
+	
+	
+	@Enumerated(EnumType.STRING)
+	private ProofOfIdentity proofOfIdentity;
+	
+	private String proofOfIdentityOthers;
+	
+	
+	private boolean nregaJob;
+	private String nregaJobString;
+	
+	
 	public enum Gender {
 		MALE, FEMALE, T_TRANSGENDER
 
@@ -90,6 +101,12 @@ public class IdentityDetails {
 	public enum ResidentialStatus {
 
 		RESIDENT_INDIVIDUAL, NON_RESIDENT_INDIAN, FOREIGN_NATIONAL, PERSON_OF_INDIAN_ORIGIN
+	}
+	
+	
+	public enum ProofOfIdentity {
+
+		UID_AADHAR, PASSPORT, VOTER_ID, DRIVING_LICENSE, OTHERS 
 	}
 
 

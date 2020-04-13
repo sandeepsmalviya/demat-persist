@@ -5,6 +5,9 @@ import java.sql.Date;
 import javax.persistence.Embeddable;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,6 +32,9 @@ public class Declaration {
 	@Enumerated(EnumType.STRING)
 	private ApplicationType applicationType;
 
+//	@NotNull(message = "kycNumber can not be null")
+//	@NotEmpty(message = "kycNumber can not be empty")
+//	@Size(min = 10, max = 10, message = "kycNumber Number must be equal to 10 characters")
 	private String kycNumber;
 	
 	@Enumerated(EnumType.STRING)
