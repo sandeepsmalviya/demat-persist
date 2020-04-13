@@ -25,9 +25,16 @@ public class OtherDetails {
 	
 	@Enumerated(EnumType.STRING)
 	private OtherDetailsForNonIndividuals otherDetailsForNonIndividuals;
-	private boolean OtherDetailsSService;
-	private boolean OtherDetailsOOthers;
-	private boolean OtherDetailsBBusiness;
+	
+	
+//	private boolean OtherDetailsSService;
+//	private boolean OtherDetailsOOthers;
+//	private boolean OtherDetailsBBusiness;
+	
+	@Enumerated(EnumType.STRING)
+	private OtherDetailsOccupationType otherDetailsOccupationType;
+	
+	
 	
 	@Enumerated(EnumType.STRING)
 	private OtherDetailsService otherDetailsService;
@@ -49,10 +56,14 @@ public class OtherDetails {
 	}
 
 	public enum OtherDetailsForNonIndividuals {
-
 		RS_25_LAC_TO_1_CRORE, OVER_1_CRORE
 	}
 
+	public enum OtherDetailsOccupationType {
+		S_SERVICE, O_OTHERS, B_BUSINESS
+	}
+	
+	
 	public enum OtherDetailsService {
 		PRIVATE_SECTOR, PUBLIC_SECTOR, GOVERNMENT_SECTOR
 	}
@@ -62,7 +73,7 @@ public class OtherDetails {
 	}
 
 	public enum OtherDetailsBusiness {
-		X_NON_CATEGORIZED, AGRICULTURE
+		X_NOT_CATEGORIZED, AGRICULTURIST
 	}
 
 	public enum OtherDetailsAffiliations {
