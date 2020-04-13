@@ -12,7 +12,6 @@ import springfox.documentation.annotations.ApiIgnore;
 @ApiIgnore
 @Component
 public class CombinedFormFill {
-	
 
 	@Autowired
 	private FilleData_Page04_KycApplicationForm page4;
@@ -22,7 +21,6 @@ public class CombinedFormFill {
 
 	@Autowired
 	private FilleData_Page06_TradingDematAccountRelatedDetails page6;
-
 
 	public PdfApplicationForm fill() throws ParseException {
 

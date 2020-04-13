@@ -17,6 +17,7 @@ import com.invest19.demat.persist.pdf.bean.page10.OtherDetails.OtherDetailsAffil
 import com.invest19.demat.persist.pdf.bean.page10.OtherDetails.OtherDetailsBusiness;
 import com.invest19.demat.persist.pdf.bean.page10.OtherDetails.OtherDetailsForNonIndividuals;
 import com.invest19.demat.persist.pdf.bean.page10.OtherDetails.OtherDetailsGrossAnnulaIncomeDetails;
+import com.invest19.demat.persist.pdf.bean.page10.OtherDetails.OtherDetailsOccupationType;
 import com.invest19.demat.persist.pdf.bean.page10.OtherDetails.OtherDetailsOthers;
 import com.invest19.demat.persist.pdf.bean.page10.OtherDetails.OtherDetailsService;
 import com.invest19.demat.persist.pdf.bean.page10.SmsAlertFacility;
@@ -73,16 +74,25 @@ public class FilleData_Page09_LetterForAuthorization {
 
 		otherDetails.setOtherDetailsAffiliations(OtherDetailsAffiliations.POLITICALLY_EXPOSED_PERSON);
 		otherDetails.setOtherDetailsAnyOtherInformation("OtherDetailsAnyOtherInformation");
-		otherDetails.setOtherDetailsBBusiness(true);
-		otherDetails.setOtherDetailsBusiness(OtherDetailsBusiness.AGRICULTURE);
+		
+//		otherDetails.setOtherDetailsBBusiness(true);
+//		otherDetails.setOtherDetailsOOthers(true);
+//		otherDetails.setOtherDetailsSService(true);
+		
+		otherDetails.setOtherDetailsOccupationType(OtherDetailsOccupationType.B_BUSINESS);
+		
+		
+		
+		otherDetails.setOtherDetailsBusiness(OtherDetailsBusiness.AGRICULTURIST);
+		
 		Date otherDetailsDate = new Date(sdf.parse("26011984").getTime());
 		otherDetails.setOtherDetailsDate(otherDetailsDate);
 		otherDetails.setOtherDetailsForNonIndividuals(OtherDetailsForNonIndividuals.OVER_1_CRORE);
 		otherDetails.setOtherDetailsGrossAnnulaIncomeDetails(OtherDetailsGrossAnnulaIncomeDetails.MORE_THAN_25_LAC);
 		otherDetails.setOtherDetailsNetWorthValue("1 CRORE");
-		otherDetails.setOtherDetailsOOthers(true);
+		
 		otherDetails.setOtherDetailsService(OtherDetailsService.GOVERNMENT_SECTOR);
-		otherDetails.setOtherDetailsSService(true);
+		
 		otherDetails.setOthersDetailsOthers(OtherDetailsOthers.PROFESSIONAL);
 
 		OptionFormForIssueOfDisBooklet optionFormForIssueOfDisBooklet = new OptionFormForIssueOfDisBooklet();

@@ -48,7 +48,7 @@ public class PdfApplicationForm {
 	@Embedded
 	@Valid
 	private LetterForAuthorization letterForAuthorization;
-	
+
 	@Embedded
 	@Valid
 	private NominationDetails nominationDetails;

@@ -16,6 +16,7 @@ import com.invest19.demat.persist.pdf.bean.page04.Declaration.ApplicationType;
 import com.invest19.demat.persist.pdf.bean.page04.IdentityDetails;
 import com.invest19.demat.persist.pdf.bean.page04.IdentityDetails.Gender;
 import com.invest19.demat.persist.pdf.bean.page04.IdentityDetails.MaritalStatus;
+import com.invest19.demat.persist.pdf.bean.page04.IdentityDetails.ProofOfIdentity;
 import com.invest19.demat.persist.pdf.bean.page04.IdentityDetails.ResidentialStatus;
 import com.invest19.demat.persist.pdf.bean.page04.KycApplicationForm;
 
@@ -26,8 +27,6 @@ import springfox.documentation.annotations.ApiIgnore;
 @RestController
 @Slf4j
 public class FilleData_Page04_KycApplicationForm {
-
-
 
 	@GetMapping("kyc")
 	public KycApplicationForm getKycApplicationForm() throws ParseException {
@@ -56,11 +55,18 @@ public class FilleData_Page04_KycApplicationForm {
 		identityDetails.setMaidenName("Surendra");
 		identityDetails.setMaritalStatus(MaritalStatus.MARRIED);
 		identityDetails.setMotherName("Santoshi");
-		identityDetails.setNregaJob("yet_to_be_tested");
+
+		identityDetails.setNregaJob(true);
+		identityDetails.setNregaJobString("yet_to_be_tested");
+
 		identityDetails.setPanNumber("ARHPM8174D");
-		identityDetails.setProofOfIdentitySubmittedForPANExemptDrivingLicence(true);
-		identityDetails.setProofOfIdentitySubmittedForPANExemptUid(true);
-		identityDetails.setProofOfIdentitySubmittedForPANExemptOthers("others_data");
+//		identityDetails.setProofOfIdentitySubmittedForPANExemptDrivingLicence(true);
+//		identityDetails.setProofOfIdentitySubmittedForPANExemptUid(true);
+//		identityDetails.setProofOfIdentitySubmittedForPANExemptOthers("others_data");
+
+		identityDetails.setProofOfIdentity(ProofOfIdentity.UID_AADHAR);
+		identityDetails.setProofOfIdentityOthers("proofOfIdentityOthers");
+
 		identityDetails.setResidentialStatus(ResidentialStatus.RESIDENT_INDIVIDUAL);
 
 		addressDetails.setAddressForResidenceCorrespondence("B 502 Sai Comforts Pimprigaon Pune");
@@ -77,7 +83,6 @@ public class FilleData_Page04_KycApplicationForm {
 		addressDetails.setPermanantAdrressIfDifferent("AT POST KUSUMKOT BK TAH DHARNI DIST AMRAVATI");
 		addressDetails.setPinCode("411017");
 		addressDetails.setPinCode2("444702");
-		
 
 		addressDetails.setCountry2("USA");
 		addressDetails.setCityTownVillage2("AMRAVATI");
@@ -93,7 +98,6 @@ public class FilleData_Page04_KycApplicationForm {
 		declaration.setApplicationType(ApplicationType.UPDATE);
 		declaration.setAttestedTrueCopies(true);
 		declaration.setOriginalsVerifiedTrueCopies(true);
-		
 
 		Date dt1 = new Date(sdf.parse("26011984").getTime());
 		declaration.setDeclarationDate(dt1);
