@@ -28,6 +28,7 @@ import com.invest19.demat.persist.pdf.bean.page16.PowerOfAttorney;
 import com.invest19.demat.persist.pdf.bean.page18.AcknowledgementLetter;
 import com.invest19.demat.persist.pdf.pdffill.CombinedFormFill;
 import com.invest19.demat.persist.services.ApplicationPersistenceService;
+import com.invest19.demat.persist.services.ApplyDatesToEmptyDateFieldsUtills;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -43,6 +44,8 @@ public class ApplicationPersistenceResource {
 	@Autowired
 	ApplicationPersistenceService applicationPersistenceService;
 
+	
+
 	@Autowired
 	private CombinedFormFill combinedFormFill;
 
@@ -50,6 +53,7 @@ public class ApplicationPersistenceResource {
 	public ResponseEntity<PdfApplicationForm> savePdfApplicationFormFromSampleData() throws ParseException {
 
 		PdfApplicationForm pdfApplicationFrom = combinedFormFill.fill();
+
 		pdfApplicationFrom = applicationPersistenceService.save(pdfApplicationFrom);
 		return new ResponseEntity<>(pdfApplicationFrom, HttpStatus.OK);
 	}
@@ -95,6 +99,7 @@ public class ApplicationPersistenceResource {
 	public ResponseEntity<PdfApplicationForm> setPdfApplicationForm(@PathVariable("userId") String userId,
 			@Valid @RequestBody PdfApplicationForm pdfApplicationFrom) {
 
+		
 		PdfApplicationForm pdfApplicationFrom1 = applicationPersistenceService.save(pdfApplicationFrom);
 		return new ResponseEntity<>(pdfApplicationFrom1, HttpStatus.CREATED);
 
@@ -385,4 +390,5 @@ public class ApplicationPersistenceResource {
 		return new ResponseEntity<>(acknowledgementLetter1, HttpStatus.CREATED);
 
 	}
+
 }

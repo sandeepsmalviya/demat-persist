@@ -17,12 +17,24 @@ public class ApplicationPersistenceService {
 	@Autowired
 	PdfApplicationFromRepository pdfApplicationFromRepository;
 
-	public PdfApplicationForm save(PdfApplicationForm pdfApplicationFrom) {
+	@Autowired
+	ApplyDatesToEmptyDateFieldsUtills applyDatesToEmptyDateFieldsUtills;
 
+	
+	public PdfApplicationForm save(PdfApplicationForm pdfApplicationFrom) {
+		
 		PdfApplicationForm pdfApplicationFormReturnValue = pdfApplicationFromRepository.save(pdfApplicationFrom);
 		return pdfApplicationFormReturnValue;
-
 	}
+	
+	
+	public PdfApplicationForm saveWithServerSuppliedDates(PdfApplicationForm pdfApplicationFrom) {
+		
+		applyDatesToEmptyDateFieldsUtills.applyDates(pdfApplicationFrom); // IMP
+		PdfApplicationForm pdfApplicationFormReturnValue = pdfApplicationFromRepository.save(pdfApplicationFrom);
+		return pdfApplicationFormReturnValue;
+	}
+
 
 	public PdfApplicationForm find(String userId) {
 
