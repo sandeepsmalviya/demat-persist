@@ -21,20 +21,21 @@ import lombok.ToString;
 @Embeddable
 public class IdentityDetails {
 
-	@NotEmpty(message = "fullName can not be empty")
+	
+	//@NotEmpty(message = "fullName can not be empty")
 	private String fullName;
 
-	@NotEmpty(message = "fatherSpouseName can not be empty")
+	//@NotEmpty(message = "fatherSpouseName can not be empty")
 	private String fatherSpouseName;
 
-	@NotEmpty(message = "maidenName can not be empty")
+	//@NotEmpty(message = "maidenName can not be empty")
 	private String maidenName;
 
-	@NotEmpty(message = "motherName can not be empty")
+	//@NotEmpty(message = "motherName can not be empty")
 	private String motherName;
 
 	@Enumerated(EnumType.STRING)
-	@NotNull(message = "gender can not be null")
+	//@NotNull(message = "gender can not be null")
 	private Gender gender;
 
 
@@ -44,7 +45,7 @@ public class IdentityDetails {
 	@Enumerated(EnumType.STRING)
 	private Citizenship citizenship;
 
-	@NotEmpty(message = "countryCode can not be empty")
+	//@NotEmpty(message = "countryCode can not be empty")
 	private String countryCode;
 
 	private Date dateOfBirth;
@@ -57,9 +58,9 @@ public class IdentityDetails {
 	@Size(min = 10, max = 10, message = "PAN Number must be equal to 10 characters")
 	private String panNumber;
 
-	@NotNull(message = "AadharNumber can not be null")
-	@NotEmpty(message = "AadharNumber can not be empty")
-	@Size(min = 12, max = 12, message = "Aadhar Number must be equal to 12 characters")
+	//@NotNull(message = "AadharNumber can not be null")
+	//@NotEmpty(message = "AadharNumber can not be empty")
+	//@Size(min = 12, max = 12, message = "Aadhar Number must be equal to 12 characters")
 	private String aadharNumber;
 
 //	private boolean proofOfIdentitySubmittedForPANExemptUid;
