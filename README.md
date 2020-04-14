@@ -5,4 +5,4 @@ It is the microservices  application in spring boot for database operation
 
 
 ### How to Run
-    java -jar demat-persist.jar --spring.profile.active=qa
+    java -Djava.net.preferIPv4Stack=true -jar demat-persist.jar --spring.profile.active=qa
