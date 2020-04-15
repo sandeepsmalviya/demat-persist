@@ -21,6 +21,7 @@ import lombok.ToString;
 @Embeddable
 public class NominationDetails {
 
+	private String nominationDetailsDpId;
 	private String nominationDetailsBioId;
 	private String nominationDetailsRegistrationNumber;
 	private String nominationDetailsPlace;

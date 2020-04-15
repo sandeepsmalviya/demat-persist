@@ -34,6 +34,7 @@ public class FilleData_Page13_NominationDetails {
 		NominationDetails nominationDetails = new NominationDetails();
 
 		
+		nominationDetails.setNominationDetailsDpId("DPID12345");
 		  nominationDetails.setNominationDetailsBioId("123456789");
 		  nominationDetails.setNominationDetailsFirstHolderName("sandeep");
 		  nominationDetails.setNominationDetailsHereByDeclare(NominationDetailsHereByDeclare.OPTION_FIRST);
