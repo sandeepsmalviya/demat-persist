@@ -95,7 +95,8 @@ public class FilleData_Page09_LetterForAuthorization {
 		OptionFormForIssueOfDisBooklet optionFormForIssueOfDisBooklet = new OptionFormForIssueOfDisBooklet();
 		letterForAuthorization.setOptionFormForIssueOfDisBooklet(optionFormForIssueOfDisBooklet);
 
-		optionFormForIssueOfDisBooklet.setOptionFormForIssueOfDisBookletBioId("123456789");
+		optionFormForIssueOfDisBooklet.setOptionFormForIssueOfDisBookletDpId("123456789");
+		optionFormForIssueOfDisBooklet.setOptionFormForIssueOfDisBookletBioId("123456789");		
 		Date optionFormForIssueOfDisBookletDate = new Date(sdf.parse("26011984").getTime());
 		optionFormForIssueOfDisBooklet.setOptionFormForIssueOfDisBookletDate(optionFormForIssueOfDisBookletDate);
 		optionFormForIssueOfDisBooklet

@@ -18,7 +18,7 @@ import com.invest19.demat.persist.pdf.bean.page06.PrimaryDepositoryAccount.DpTyp
 import com.invest19.demat.persist.pdf.bean.page06.TradingDematAccountRelatedDetails;
 import com.invest19.demat.persist.pdf.bean.page06.TradingPreferences;
 import com.invest19.demat.persist.pdf.bean.page07.AdditionalDetails;
-import com.invest19.demat.persist.pdf.bean.page07.AdditionalDetails.ContactNoteReference;
+import com.invest19.demat.persist.pdf.bean.page07.AdditionalDetails.ContactNotePreference;
 import com.invest19.demat.persist.pdf.bean.page07.ClientsInterview;
 import com.invest19.demat.persist.pdf.bean.page07.ForOfficeUseOnly;
 import com.invest19.demat.persist.pdf.bean.page07.InPersonVerification;
@@ -112,7 +112,7 @@ public class FilleData_Page06_TradingDematAccountRelatedDetails {
 		tdard.setAdditionalDetails(additionalDetails);
 
 		additionalDetails.setAdditionalDetailsAnyOtherInformation("any other indformation");
-		additionalDetails.setContactNoteReference(ContactNoteReference.ELECTRONIC_CONTRACT_NOTE);
+		additionalDetails.setContactNotePreference(ContactNotePreference.ELECTRONIC_CONTRACT_NOTE);
 		additionalDetails.setAdditionalDetailsEmailAddress("sandeepm@cdac.in");
 		additionalDetails.setNumberOfYearsOfInvestment(5);
 		additionalDetails.setResidentialAddressToDealInSecurities("B 502 Sai Comforts");

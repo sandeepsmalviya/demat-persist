@@ -19,6 +19,7 @@ import lombok.ToString;
 public class OptionFormForIssueOfDisBooklet {
 
 	private String optionFormForIssueOfDisBookletBioId;
+	private String optionFormForIssueOfDisBookletDpId;
 	private Date optionFormForIssueOfDisBookletDate;
 
 	@Enumerated(EnumType.STRING)

@@ -17,9 +17,9 @@ import lombok.ToString;
 public class AdditionalDetails {
 
 	@Enumerated(EnumType.STRING)
-	  private ContactNoteReference contactNoteReference;
+	  private ContactNotePreference contactNotePreference;
 	  
-	  public enum ContactNoteReference {
+	  public enum ContactNotePreference {
 		  
 		  ELECTRONIC_CONTRACT_NOTE,
 		  PHYSICAL_CONTRACT_NOTE,
