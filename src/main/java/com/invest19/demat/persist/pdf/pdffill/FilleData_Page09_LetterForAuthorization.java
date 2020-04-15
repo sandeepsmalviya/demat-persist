@@ -80,9 +80,6 @@ public class FilleData_Page09_LetterForAuthorization {
 //		otherDetails.setOtherDetailsSService(true);
 		
 		otherDetails.setOtherDetailsOccupationType(OtherDetailsOccupationType.B_BUSINESS);
-		
-		
-		
 		otherDetails.setOtherDetailsBusiness(OtherDetailsBusiness.AGRICULTURIST);
 		
 		Date otherDetailsDate = new Date(sdf.parse("26011984").getTime());
@@ -103,6 +100,9 @@ public class FilleData_Page09_LetterForAuthorization {
 		optionFormForIssueOfDisBooklet.setOptionFormForIssueOfDisBookletDate(optionFormForIssueOfDisBookletDate);
 		optionFormForIssueOfDisBooklet
 				.setOptionFormForIssueOfDisBookletSelectOption(OptionFormForIssueOfDisBookletSelectOption.OPTION1);
+		
+		
+		
 
 		FatcaDeclarationForIndividual fatcaDeclarationForIndividual = new FatcaDeclarationForIndividual();
 		letterForAuthorization.setFatcaDeclarationForIndividual(fatcaDeclarationForIndividual);

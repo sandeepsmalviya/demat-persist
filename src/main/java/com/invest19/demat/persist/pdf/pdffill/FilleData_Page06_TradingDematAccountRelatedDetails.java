@@ -116,6 +116,7 @@ public class FilleData_Page06_TradingDematAccountRelatedDetails {
 		additionalDetails.setAdditionalDetailsEmailAddress("sandeepm@cdac.in");
 		additionalDetails.setNumberOfYearsOfInvestment(5);
 		additionalDetails.setResidentialAddressToDealInSecurities("B 502 Sai Comforts");
+		additionalDetails.setIWishToAvailIntenetTrading(true);
 
 		IntroducerDeatails introducerDeatails = new IntroducerDeatails();
 		tdard.setIntroducerDeatails(introducerDeatails);

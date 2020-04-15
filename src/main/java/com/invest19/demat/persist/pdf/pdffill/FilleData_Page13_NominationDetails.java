@@ -38,6 +38,11 @@ public class FilleData_Page13_NominationDetails {
 		  nominationDetails.setNominationDetailsFirstHolderName("sandeep");
 		  nominationDetails.setNominationDetailsHereByDeclare(NominationDetailsHereByDeclare.OPTION_FIRST);
 		  
+		  SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy"); Date
+		  nominationDetailsDate = new Date(sdf.parse("26011984").getTime());
+		  nominationDetails.setNominationDetailsDate(nominationDetailsDate);
+		  
+		  
 		  Nominee1 nominationDetailsNominee1 = new Nominee1();
 		  nominationDetailsNominee1.setNominee1Address("nominee1Address");
 		  nominationDetailsNominee1.setNominee1City("nominee1City");
@@ -173,6 +178,7 @@ public class FilleData_Page13_NominationDetails {
 		  nominationDetails.setNominationDetailsWitnessName("witnessname");
 		  
 		  NominationDetailsDeclaration nominationDetailsDeclaration = new NominationDetailsDeclaration();
+		  nominationDetails.setNominationDetailsDeclaration(nominationDetailsDeclaration);
 		  
 		  nominationDetailsDeclaration.setNominationDetailsDeclarationEmailBelongsTo("nominationDetailsDeclarationEmailBelongsTo");
 		  nominationDetailsDeclaration.setNominationDetailsDeclarationRelationShipWithClient(
