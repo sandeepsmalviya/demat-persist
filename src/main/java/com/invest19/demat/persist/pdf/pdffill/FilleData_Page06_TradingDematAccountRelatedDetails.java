@@ -178,6 +178,8 @@ public class FilleData_Page06_TradingDematAccountRelatedDetails {
 		partB.setClientsName("My client");
 		Date partBDate = new Date(sdf.parse("26011984").getTime());
 		partB.setPartBDate(partBDate);
+		partB.setPartBDpId("12345678");
+		partB.setPartBBoId("1234");
 
 		return tdard;
 	}

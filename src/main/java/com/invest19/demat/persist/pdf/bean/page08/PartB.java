@@ -19,4 +19,7 @@ public class PartB {
 	private String clientsName;
 	private Date partBDate;
 
+	private String partBDpId;	
+	private String partBBoId;
+
 }
